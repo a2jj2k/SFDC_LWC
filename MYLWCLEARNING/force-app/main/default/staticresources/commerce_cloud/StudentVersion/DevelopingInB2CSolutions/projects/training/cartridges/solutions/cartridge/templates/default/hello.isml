@@ -1,0 +1,9 @@
+<!--- TEMPLATENAME: hello.isml --->
+<html>
+	<head>
+		<title>Hello Tag</title>
+	</head>
+	<body>
+		Hello World!
+	</body>
+</html>

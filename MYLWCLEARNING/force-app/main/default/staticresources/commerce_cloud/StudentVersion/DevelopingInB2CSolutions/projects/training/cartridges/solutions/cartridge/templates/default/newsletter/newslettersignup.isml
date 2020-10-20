@@ -1,0 +1,22 @@
+<isdecorate template="account/pt_account">
+	<isinclude template="util/modules">
+	<h3>${Resource.msg('global.newslettersignup', 'messages', null)}</h3>
+	<form action="${URLUtils.httpContinue()}" method="post">
+		<fieldset>
+		    <div class="formfield">
+		         <isinputfield formfield="${session.forms.newsletter.fname}" type="input">
+		    </div>
+		    <div class="formfield">
+		        <isinputfield formfield="${session.forms.newsletter.lname}" type="input">
+		    </div>
+		    <div class="formfield">
+		        <isinputfield formfield="${session.forms.newsletter.email}" type="input">
+		        <div class="clear"><!-- FLOAT CLEAR --></div>
+		    </div>
+			<div class="formactions">
+			<input type="submit" value="${Resource.msg('global.submit','locale',null)}" 
+			    name="${session.forms.newsletter.subscribe.htmlName}"/>
+			</div>
+		</fieldset>
+	</form>
+</isdecorate>

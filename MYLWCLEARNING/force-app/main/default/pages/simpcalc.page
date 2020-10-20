@@ -1,0 +1,26 @@
+<apex:page sidebar="false" showHeader="false" controller="SimpcalCntrlr">
+<script>
+.btnsize{
+width: 250px; height: 250px;
+}
+</script>
+  <apex:pageBlock title="Simple Calculator">
+      
+      <apex:pageBlockSection >
+          <center>
+              <apex:form >
+                  <apex:outputLabel value="Enter number 1 : " for="num1"></apex:outputLabel>
+                  <apex:inputText id="num1" value="{!number1}"/><br/><br/>
+                  <apex:outputLabel value="Enter number 2 : " for="num2"></apex:outputLabel>
+                  <apex:inputText id="num2" value="{!number2}"/><br/> <br/>
+                  <apex:outputLabel value="{!result}"></apex:outputLabel><br/><br/><br/>
+                  <apex:commandButton value="ADD" action="{!add}" styleClass="btnsize" style="background:LightBlue"/>&nbsp;&nbsp;&nbsp;
+                  <apex:commandButton value="SUBSTRACT" action="{!substract}" style="background:LightBlue"/>&nbsp;&nbsp;&nbsp;
+                  <apex:commandButton value="MULTIPLY" action="{!multiply}" style="background:LightBlue"/>&nbsp;&nbsp;&nbsp;
+                  <apex:commandButton value="DIVIDE" action="{!divide}" style="background:LightBlue"/>
+              </apex:form>
+          </center>
+      </apex:pageBlockSection>
+       
+  </apex:pageBlock>
+</apex:page>

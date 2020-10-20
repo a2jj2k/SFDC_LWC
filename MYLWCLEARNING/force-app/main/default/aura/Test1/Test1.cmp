@@ -1,0 +1,6 @@
+<aura:component implements="force:appHostable,lightning:isUrlAddressable,flexipage:availableForAllPageTypes" access="global" >
+<lightning:navigation aura:id="navService"/>
+<aura:attribute name="url" type="string"/>
+<aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+<lightning:button label="Navigate" onclick="{!c.handleClick}"/>
+</aura:component>

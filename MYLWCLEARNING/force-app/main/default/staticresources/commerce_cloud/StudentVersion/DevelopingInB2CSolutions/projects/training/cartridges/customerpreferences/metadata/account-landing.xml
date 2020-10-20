@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?><library xmlns="http://www.demandware.com/xml/impex/library/2006-10-31">
+    <content content-id="account-landing">
+        <display-name xml:lang="x-default">Account Landing Page</display-name>
+        <description xml:lang="x-default">Account Landing Page Content, content located in accountoverview.isml.</description>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes>
+            <page-title xml:lang="x-default">My SiteGenesis Account</page-title>
+            <page-description xml:lang="x-default">Demandware Reference Application Account Landing Page</page-description>
+            <page-keywords xml:lang="x-default">account, shop</page-keywords>
+        </page-attributes>
+        <custom-attributes>
+            <custom-attribute xml:lang="x-default" attribute-id="body">&lt;table cellspacing="0" cellpadding="0" border="0" summary="Account Landing Table"&gt;&#13;
+    &lt;tbody&gt;&#13;
+        &lt;tr&gt;&#13;
+            &lt;td style="width:54px;"&gt;&#13;
+	            &lt;a title="Show or update your personal information" href="$httpsUrl(Account-EditProfile)$"&gt;&lt;img height="48" width="48" src="images/roles_ico.gif?$staticlink$" alt="Personal Data" /&gt;&lt;/a&gt;&#13;
+            &lt;/td&gt;&#13;
+            &lt;td&gt;&#13;
+            &lt;h2&gt;&lt;a title="Show or update your personal information" href="$httpsUrl(Account-EditProfile)$"&gt;Personal Data&lt;/a&gt;&lt;/h2&gt;&#13;
+            &lt;p&gt;Show or update your personal information&lt;/p&gt;&#13;
+            &lt;/td&gt;&#13;
+        &lt;/tr&gt;&#13;
+        &lt;tr&gt;&#13;
+            &lt;td&gt;&#13;
+            	&lt;a title="Manage your billing and shipping addresses" href="$httpsUrl(Address-List)$"&gt;&lt;img height="48" width="48" src="images/users_ico.gif?$staticlink$" alt="Addresses" /&gt;&lt;/a&gt;&#13;
+            &lt;/td&gt;&#13;
+            &lt;td&gt;&#13;
+            &lt;h2&gt;&lt;a title="Manage your billing and shipping addresses" href="$httpsUrl(Address-List)$"&gt;Addresses&lt;/a&gt;&lt;/h2&gt;&#13;
+            &lt;p&gt;Manage your billing and shipping addresses&lt;/p&gt;&#13;
+            &lt;/td&gt;&#13;
+        &lt;/tr&gt;&#13;
+        &lt;tr&gt;&#13;
+            &lt;td&gt;&#13;
+            	&lt;a title="Manage Credit Cards" href="$httpsUrl(PaymentInstruments-List)$"&gt;&lt;img height="48" width="48" src="images/payment_methods_ico.gif?$staticlink$" alt="Payment Settings" /&gt;&lt;/a&gt;&#13;
+            &lt;/td&gt;&#13;
+            &lt;td&gt;&#13;
+            &lt;h2&gt;&lt;a title="Manage Credit Cards" href="$httpsUrl(PaymentInstruments-List)$"&gt;Payment Settings&lt;/a&gt;&lt;/h2&gt;&#13;
+            &lt;p&gt;Manage Credit Cards&lt;/p&gt;&#13;
+            &lt;/td&gt;&#13;
+        &lt;/tr&gt;&#13;
+        &lt;tr&gt;&#13;
+            &lt;td&gt;&#13;
+            	&lt;a title="Check the status of your orders or see past orders" href="$httpsUrl(Order-History)$"&gt;&lt;img height="48" width="48" src="images/open_orders_ico.gif?$staticlink$" alt="Orders" /&gt;&lt;/a&gt;&#13;
+            &lt;/td&gt;&#13;
+            &lt;td&gt;&#13;
+            &lt;h2&gt;&lt;a title="Check the status of your orders or see past orders" href="$httpsUrl(Order-History)$"&gt;Orders&lt;/a&gt;&lt;/h2&gt;&#13;
+            &lt;p&gt;Check the status of your orders or see past orders&lt;/p&gt;&#13;
+            &lt;/td&gt;&#13;
+        &lt;/tr&gt;&#13;
+        &lt;tr&gt;&#13;
+            &lt;td&gt;&#13;
+            	&lt;a title="View and modify items on your list or invite friends" href="$httpsUrl(Wishlist-Show)$"&gt;&lt;img height="48" width="48" src="images/product_set_ico.gif?$staticlink$" alt="Wish List" /&gt;&lt;/a&gt;&#13;
+            &lt;/td&gt;&#13;
+            &lt;td&gt;&#13;
+            &lt;h2&gt;&lt;a title="View and modify items on your list or invite friends" href="$httpsUrl(Wishlist-Show)$"&gt;Wish List&lt;/a&gt;&lt;/h2&gt;&#13;
+            &lt;p&gt;View and modify items on your list or invite friends&lt;/p&gt;&#13;
+            &lt;/td&gt;&#13;
+        &lt;/tr&gt;&#13;
+        &lt;tr&gt;&#13;
+            &lt;td&gt;&#13;
+            	&lt;a title="View and modify your gift registries" href="$httpsUrl(GiftRegistry-Start)$"&gt;&lt;img height="48" width="48" src="images/logviewer_ico.gif?$staticlink$" alt="Gift Registries" /&gt;&lt;/a&gt;&#13;
+            &lt;/td&gt;&#13;
+            &lt;td&gt;&#13;
+            &lt;h2&gt;&lt;a title="View and modify your gift registries" href="$httpsUrl(GiftRegistry-Start)$"&gt;Gift Registries&lt;/a&gt;&lt;/h2&gt;&#13;
+            &lt;p&gt;View and modify your gift registries&lt;/p&gt;&#13;
+            &lt;/td&gt;&#13;
+        &lt;/tr&gt;&#13;
+        &lt;tr&gt;&#13;
+            &lt;td&gt;&#13;
+            	&lt;a title="View and modify your preferences" href="$httpsUrl(EditPreferences-Start)$"&gt;&lt;img height="48" width="48" src="images/logviewer_ico.gif?$staticlink$" alt="EditPreferences" /&gt;&lt;/a&gt;&#13;
+            &lt;/td&gt;&#13;
+            &lt;td&gt;&#13;
+            &lt;h2&gt;&lt;a title="View and modify your preferences" href="$httpsUrl(EditPreferences-Start)$"&gt;Edit Preferences&lt;/a&gt;&lt;/h2&gt;&#13;
+            &lt;p&gt;View and modify your gift registries&lt;/p&gt;&#13;
+            &lt;/td&gt;&#13;
+        &lt;/tr&gt;&#13;
+    &lt;/tbody&gt;&#13;
+&lt;/table&gt;</custom-attribute>
+        </custom-attributes>
+        <folder-links>
+            <classification-link folder-id="my-account"/>
+        </folder-links>
+    </content>
+</library>

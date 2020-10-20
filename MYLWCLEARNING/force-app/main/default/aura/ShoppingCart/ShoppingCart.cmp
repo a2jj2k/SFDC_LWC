@@ -1,0 +1,14 @@
+<aura:component implements="force:appHostable" controller="ProductSearchService">
+    <aura:handler name="ItemEvent" event="c:SearchEvent" action="{!c.handleCompEvent}" />
+    <aura:handler name="init" value="{!this}" action="{!c.handleCompEvent}" />
+    <aura:attribute name="itemList" type="object" />
+	<div>
+        <c:HeaderComponent TagLine="Shopping Cart" message="The Complete Shopping Experience"/>
+    </div>
+    <div>
+    	<c:ItemSearch/>
+    </div>
+    <div>
+    	<c:ItemListComponent recordList="{!v.itemList}"/>
+    </div>
+</aura:component>

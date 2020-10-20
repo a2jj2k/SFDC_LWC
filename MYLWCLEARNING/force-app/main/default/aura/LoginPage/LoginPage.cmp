@@ -1,0 +1,15 @@
+<aura:component implements="force:appHostable">
+    <div class="slds-align_absolute-center" style="height:25rem">
+        
+        <div class="row">
+            <center><h1 style="color: cornflowerblue;">Authenticate Yourself Here !</h1></center>
+    		<lightning:input name="input3"  placeholder="Username"  style="width: 255px !important;"/>
+    		<lightning:input type="password" name="input3" placeholder="Password" style="width: 255px !important;"/>
+            <div style="padding-top: 10px;">
+                <lightning:button value="log in" label="Log In" variant="brand" onclick=""/>            
+            </div>
+			
+        </div>
+    </div>
+    
+</aura:component>

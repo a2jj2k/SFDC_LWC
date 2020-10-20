@@ -1,0 +1,38 @@
+<aura:component implements="lightning:isUrlAddressable,flexipage:availableForAllPageTypes" controller="MysurveyController">
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    
+	<aura:attribute name="pos" type="Integer"  default="0"/>
+    <aura:attribute name="surveyid" type="String"/>
+    <aura:attribute name="surveys" type="String[]"/>
+    
+    <aura:attribute name="optclist" type="My_Survey_Question_Ans__c[]"/>
+    <aura:attribute name="qntitle" type="String" default="Kevin"/>
+    <aura:attribute name="qnid" type="String"/>
+    
+    <aura:attribute name="questions" type="QnAnsWrapper[]"/>
+    <lightning:select name="QnS" label="Select a Survey" required="true" onchange="{!c.loadQuestions}" aura:id="QnS" value="{!v.surveyid}">
+        <option value="">choose one...</option>
+        <aura:iteration items="{!v.surveys}" var="s">
+                <option value = "{!s.Id}" text="{!s.Name}"></option>
+            </aura:iteration>
+    </lightning:select>
+    
+    
+    <aura:if isTrue="{!!empty(v.questions)}">
+        <lightning:card footer="Enfielder" title="{!v.qntitle}">
+            
+            <aura:iteration items="{!v.optclist}" var="i">
+        	<p class="slds-p-horizontal_small">
+            	<ui:inputRadio aura:id="{!i.Id}" name="{!i.Id}" label="{!i.Name}"/>
+        	</p>
+            </aura:iteration>
+            
+    	</lightning:card><br/>
+    	<lightning:button label="Prvs" variant="brand" onclick="{!c.load_prvs}" class=".slds-float_left"/>
+    	<lightning:button label="Next" variant="brand" onclick="{!c.load_next}" class="slds-float_right"/>
+    </aura:if>
+        
+    
+    
+</aura:component>

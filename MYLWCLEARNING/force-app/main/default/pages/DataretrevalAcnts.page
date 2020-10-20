@@ -1,0 +1,30 @@
+<apex:page sidebar="false" showHeader="false" controller="DateRtrvlDemoCnrtlr">
+    <style>
+        .custom1 {
+            background-color: red !important;
+        }
+        .custom3 {
+            background-color: green !important;
+        }
+        function colorPageBlock(pageblock, color) {
+            if (pageblock != null) pageblock.firstChild.style.cssText = “background-color: ” + color + “;”;
+
+        }
+    </style>
+     <apex:pageBlock >
+          <apex:outputpanel layout="block" styleClass="custom1">
+               <apex:pageBlockSection title="Section 1">Content 1</apex:pageBlockSection>
+           </apex:outputpanel>
+     <apex:pageBlockSection id="redSection" title="All Accounts" columns="2">
+         <apex:pageBlockTable value="{!acnts}" var="a">
+             <apex:column value="{!a.Name}"/>
+             <apex:column value="{!a.Type}"/>
+             <apex:column value="{!a.Industry}"/>
+             <apex:column value="{!a.Phone}"/>
+             <apex:column value="{!a.Fax}"/>
+         </apex:pageBlockTable>
+     <script>colorPageBlock(document.getElementById("{!$Component.redSection}"), "red");</script>
+     </apex:pageBlockSection>
+     </apex:pageBlock>
+  
+</apex:page>

@@ -1,0 +1,70 @@
+<apex:page >
+  
+<style>
+.button {
+ 
+    height: 25px;
+    width: 40px;
+    text-align: center;
+    background-color: red;
+    font-weight: bold;
+}
+ table{
+    margin-top: 150px;
+    marigin-bottom: 150px ;
+}
+</style>
+
+
+<script>
+function number1(n)
+    {
+    var a = document.getElementById('display').value;
+    var b=a+n;
+    document.getElementById('display').value = b;
+    }
+function clear1()
+    {
+    document.getElementById('display').value = '';
+    }
+function calc()
+    {
+    var a = document.getElementById('display').value;
+    var c = eval(a);
+    document.getElementById('display').value = c;
+    }
+</script>
+<center>
+<TABLE border="2">
+<TR>
+<TD>
+<INPUT TYPE="text"   NAME="Input" id="display" Size="20"/>
+<br/>
+</TD>
+</TR>
+<TR>
+<TD>
+<INPUT TYPE="button" NAME="one"   class="button" VALUE="  1  " Onclick="number1('1')"/>
+<INPUT TYPE="button" NAME="two"   class="button" VALUE="  2  " OnCLick="number1('2')"/>
+<INPUT TYPE="button" NAME="three" class="button" VALUE="  3  " OnClick="number1('3')"/>
+<INPUT TYPE="button" NAME="plus"  class="button" VALUE="  +  " OnClick="number1(' + ')"/>
+<br/><br/>
+<INPUT TYPE="button" NAME="four"  class="button" VALUE="  4  " OnClick="number1('4')"/>
+<INPUT TYPE="button" NAME="five"  class="button" VALUE="  5  " OnCLick="number1('5')"/>
+<INPUT TYPE="button" NAME="six"   class="button" VALUE="  6  " OnClick="number1('6')"/>
+<INPUT TYPE="button" NAME="minus" class="button" VALUE="  -  " OnClick="number1(' - ')"/>
+<br/><br/>
+<INPUT TYPE="button" NAME="seven" class="button" VALUE="  7  " OnClick="number1('7')"/>
+<INPUT TYPE="button" NAME="eight" class="button" VALUE="  8  " OnCLick="number1('8')"/>
+<INPUT TYPE="button" NAME="nine"  class="button" VALUE="  9  " OnClick="number1('9')"/>
+<INPUT TYPE="button" NAME="times" class="button" VALUE="  x  " OnClick="number1(' * ')"/>
+<br/><br/>
+<INPUT TYPE="button" NAME="clear" class="button" VALUE="  c  " OnClick="clear1()"/>
+<INPUT TYPE="button" NAME="zero"  class="button" VALUE="  0  " OnClick="number1('0')"/>
+<INPUT TYPE="button" NAME="DoIt"  class="button" VALUE="  =  " OnClick="calc()"/>
+<INPUT TYPE="button" NAME="div"   class="button" VALUE="  /  " OnClick="number1(' / ')"/>
+</TD>
+</TR>
+</TABLE>
+</center>
+</apex:page>

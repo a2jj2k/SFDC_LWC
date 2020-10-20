@@ -1,0 +1,13 @@
+<isdecorate template="checkout/cart/pt_cart"> 
+<h1>Basket items are :</h1>
+<br/>
+<isloop items="${pdict.myBasket.allProductLineItems}" 
+status= "statusVar" 
+var="productLineItem">
+<isif condition="${productLineItem.product.name != null}" > 
+<h2>${statusVar.count}. ${productLineItem.product.name}<br/></h2>
+<iselse>
+<h2>${statusVar.count}. ${productLineItem.productName}<br/></h2>
+</isif>
+</isloop>
+</isdecorate>

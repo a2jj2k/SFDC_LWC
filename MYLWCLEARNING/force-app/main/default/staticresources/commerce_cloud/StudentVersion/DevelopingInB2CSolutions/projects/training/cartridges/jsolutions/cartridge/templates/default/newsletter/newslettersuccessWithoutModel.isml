@@ -1,0 +1,13 @@
+<isdecorate template="account/pt_account">
+	<h3>
+		${Resource.msgf('global.newsletterthanks',
+			'locale', 
+			null, 
+			pdict.Subscription.custom.firstName,  
+			pdict.Subscription.custom.lastName )}
+	</h3>
+	Back to <a href="${URLUtils.url('NewsletterJV2WithoutModel-Start')}">Newsletter Subscription</a>.
+	
+</isdecorate>
+
+

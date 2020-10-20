@@ -1,0 +1,41 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    <aura:attribute name="num1" type="String"/>
+    <aura:attribute name="num2" type="String"/>
+    <aura:attribute name="opr" type="String"/>
+    <aura:attribute name="disp" type="String" default='0'/>
+    
+    <center>
+    <div style="padding-left:10px;">
+        <lightning:input name="lname" aura:id="signupform" value="{!v.disp}" style="width: 200px !important;" disabled = "true"/>
+    </div>
+    <br></br>
+	<div style="padding-left:10px;">
+        <lightning:button label="1" variant="brand" onclick="{!c.disp1}" />&nbsp;
+    	<lightning:button label="2" variant="brand" onclick="{!c.disp2}"/>&nbsp;
+        <lightning:button label="3" variant="brand" onclick="{!c.disp3}"/>&nbsp;
+        <lightning:button label="+" variant="brand" onclick="{!c.add}"/>
+    </div>
+    <br></br>
+    <div style="padding-left:10px;">
+    	<lightning:button label="4" variant="brand" onclick="{!c.disp4}"/>&nbsp;
+    	<lightning:button label="5" variant="brand" onclick="{!c.disp5}"/>&nbsp;
+        <lightning:button label="6" variant="brand" onclick="{!c.disp6}"/>&nbsp;
+        <lightning:button label="_" variant="brand" onclick="{!c.sub}"/>
+    </div>
+    <br></br>
+    <div style="padding-left:10px;">
+    	<lightning:button label="7" variant="brand" onclick="{!c.disp7}"/>&nbsp;
+    	<lightning:button label="8" variant="brand" onclick="{!c.disp8}"/>&nbsp;
+        <lightning:button label="9" variant="brand" onclick="{!c.disp9}"/>&nbsp;
+        <lightning:button label="*" variant="brand" onclick="{!c.mul}"/>
+    </div>
+    
+    <br></br>
+    <div style="padding-left:10px;">
+    	<lightning:button label="C" variant="brand" onclick="{!c.clear}"/>&nbsp;
+    	<lightning:button label="0" variant="brand" onclick="{!c.disp0}"/>&nbsp;
+        <lightning:button label="=" variant="destructive" onclick="{!c.equals}"/>&nbsp;
+        <lightning:button label="/" variant="brand" onclick="{!c.div}"/>
+    </div>
+    </center>
+</aura:component>

@@ -1,0 +1,22 @@
+<aura:component implements="lightning:isUrlAddressable,flexipage:availableForAllPageTypes" controller="AllAccountsDemo">
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:attribute name="accList" type="Account" />
+    
+    
+    <div class="slds-p-around_small">
+        <div class="slds-grid slds-wrap">
+            <aura:iteration items="{!v.accList}" var="con">
+                    <div class="slds-col slds-size_1-of-3 slds-p-around_small">
+                        <lightning:card  title="{!con.Name}" footer="{!con.Industry}" iconName="action:add_contact">
+                            
+                            <p class="slds-p-horizontal_small">
+                                Acc No : {!con.AccountNumber} <br/>Phone : {!con.Phone} <br/>Fax : {!con.Fax} <br/>Type : {!con.Type}
+                            </p>
+                        </lightning:card>
+                    </div>
+            </aura:iteration>
+    	</div>
+    </div>
+	
+</aura:component>

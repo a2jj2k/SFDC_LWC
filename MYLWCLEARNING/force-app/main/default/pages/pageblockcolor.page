@@ -1,0 +1,27 @@
+<apex:page id="pg">
+    <apex:form id="fm">
+      <apex:inputtext id="Name" onchange="Show()"/>
+      <script>
+        function Show(){
+          alert('test');
+          var myname = document.getElementById('{!$Component.Name}').value;
+          alert("my Name is==>"+ myname );
+          
+        }
+        
+        function demo(){
+          alert('demo is calling');
+          var myage = document.getElementById('pg:fm:pb2:age').value;
+           alert('My age is==>'+myage );
+        }
+      </script>
+      <br/>
+      <br/>
+      
+      <apex:pageblock id="pb2">
+      
+      <apex:inputtext id="age" onchange="demo()"/>
+      </apex:pageblock>
+      
+    </apex:form> 
+ </apex:page>

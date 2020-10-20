@@ -1,0 +1,31 @@
+tcs_ccd@yopmail.com
+India_2019
+
+
+ https://zztr-xxx.sandbox.us01.dx.commercecloud.salesforce.com/on/demandware.store/Sites-Site
+ 
+ zztr-300.sandbox.us01.dx.commercecloud.salesforce.com
+ 
+https://zztr-300.sandbox.us01.dx.commercecloud.salesforce.com/on/demandware.store/Sites-SiteGenesis-Site/default/HelloWorld?pid=1234
+
+P0048
+
+
+<isinclude template="product/producttile" />
+
+
+
+
+<ul>
+		<isloop items="${slotcontent.content}" var="product">
+			<li>
+				<div class="analytics capture-product-id"><isprint value="${product.getID()}"/></div>
+				<isproducttile product="${product}" showpricing="${true}"/>
+			</li>
+		</isloop>
+	</ul>
+	
+	
+	JEditPreferences
+	CacheController
+	

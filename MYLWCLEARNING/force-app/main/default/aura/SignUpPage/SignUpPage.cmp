@@ -1,0 +1,56 @@
+<aura:component implements="force:appHostable" controller="SignUpController">
+    <aura:attribute name="fname" type="String" />
+    <aura:attribute name="lname" type="String" />
+    <aura:attribute name="emailid" type="String" />
+    <aura:attribute name="pswd" type="String" />
+    <aura:attribute name="cpswd" type="String" />
+    <aura:attribute name="telep" type="Long" />
+     <div class="slds-align_absolute-center " style="height:30rem">
+         <!--slds-box slds-theme_shade-->
+	<div aria-labelledby="newsignupform">
+        <!-- BOXED AREA -->
+        <fieldset class="slds-box slds-theme--default slds-container--small">
+        <legend id="newsignupform" class="slds-text-heading--small 
+          slds-p-vertical--medium">
+          Sign Up
+        </legend>
+  
+        
+        <form class="slds-form--stacked">          
+            <lightning:input name="fname" aura:id="signupform"
+                             value="{!v.fname}"
+                             label="First Name"/>
+            
+            <lightning:input name="lname" aura:id="signupform"
+                             value="{!v.lname}"
+                             label="Last Name"/>
+            
+            <lightning:input type="email" aura:id="signupform" name="emailid"
+                             value="{!v.emailid}"
+                             label="Email id" 
+                             style="width: 300px !important;"/>
+            
+            <lightning:input type="password" aura:id="signupform" label="Password"
+                             value="{!v.pswd}"
+                             name="pswd"/>
+            
+            <lightning:input type="password" aura:id="signupform" label="Confirm Password"
+                             value="{!v.cpswd}"
+                             name="cpswd"/>
+            
+            <lightning:input type="tel" aura:id="signupform" label="Telephone"
+                             value="{!v.telep}"
+                             name="telep"/>
+            
+            <lightning:button label="Sign Up" 
+                              class="slds-m-top--medium"
+                              variant="brand"
+                              onclick="{!c.signUp}"/>
+        </form>
+        <!-- / CREATE NEW EXPENSE FORM -->
+  
+      </fieldset>
+      <!-- / BOXED AREA -->
+    </div>
+   </div>
+</aura:component>

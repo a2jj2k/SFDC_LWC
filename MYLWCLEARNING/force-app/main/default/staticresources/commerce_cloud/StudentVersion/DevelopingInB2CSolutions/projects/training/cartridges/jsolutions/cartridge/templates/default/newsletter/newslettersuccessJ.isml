@@ -1,0 +1,10 @@
+<isdecorate template="account/pt_account">
+	<h3>
+		${Resource.msgf('global.newsletterthanks',
+			'locale', 
+			null, 
+			session.forms.newsletter.fname.value,  
+			session.forms.newsletter.lname.value )}
+	</h3>
+	Back to <a href="${URLUtils.url('NewsletterJ-Start')}">Newsletter Subscription</a>.
+</isdecorate>

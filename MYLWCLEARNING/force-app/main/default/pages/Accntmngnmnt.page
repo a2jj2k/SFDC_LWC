@@ -1,0 +1,32 @@
+<apex:page showHeader="false" controller="AccountMngCntrlr">
+  <apex:pageBlock title="Create Account">
+  <apex:pageBlockSection >
+      <apex:form >
+          Name :
+          <apex:inputField value="{!acc.Name}" /><br/>
+          Phone : <br/><apex:inputField value="{!acc.Phone}"/><br/><br/>
+          <apex:commandButton value="Create" action="{!save}"/>
+      </apex:form>
+      </apex:pageBlockSection>
+  
+  </apex:pageBlock>
+  <apex:pageBlock title="Search Account">
+      <apex:form >
+          Name : &nbsp;
+          <apex:inputText value="{!accname}"/>&nbsp;&nbsp;&nbsp;&nbsp;
+          <apex:commandButton value="Search" action="{!Search}"/>
+      </apex:form>
+  </apex:pageBlock>
+  
+  <apex:pageBlock title="Account Details">
+      <apex:form >
+      <apex:commandButton value="Edit" action="{!EditSectedRcrd}"/>
+      <apex:pageBlockTable value="{!myWrp}" var="a">
+          <apex:column ><apex:inputCheckbox value="{!a.sltdcvalue}"/></apex:column>
+          <apex:column value="{!a.accData.Name}"/>
+          <apex:column value="{!a.accData.Type}"/>
+          <apex:column value="{!a.accData.Phone}"/>
+      </apex:pageBlockTable>
+      </apex:form>
+  </apex:pageBlock>
+</apex:page>

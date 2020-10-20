@@ -1,0 +1,5 @@
+<!--- TEMPLATENAME: notempty.isml --->
+
+<!---<h1>Got the parameter ${pdict.CurrentHttpParameterMap.param.value}</h1>-->
+
+<h1>Got the parameter ${pdict.Parameter}</h1>

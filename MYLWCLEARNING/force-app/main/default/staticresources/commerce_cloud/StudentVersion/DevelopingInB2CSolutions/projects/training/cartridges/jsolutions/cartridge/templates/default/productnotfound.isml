@@ -1,0 +1,3 @@
+<!-- <h1> ${Resource.msgf('product.notfound','messages',null, pdict.CurrentHttpParameterMap.pid.value)} </h1> -->
+
+<h1> ${Resource.msgf('product.notfound','messages',null, pdict.Parameter)} </h1>

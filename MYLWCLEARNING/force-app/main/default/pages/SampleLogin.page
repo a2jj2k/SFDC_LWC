@@ -1,0 +1,13 @@
+<apex:page >
+<apex:form >
+<apex:pageBlock >
+
+    <br>UserName&nbsp;<apex:inputText label="center" /></br>
+    <br>Password &nbsp;&nbsp;<apex:inputsecret /></br>
+    <apex:commandButton value="Login"  reRender="Error"/>
+    
+    <apex:pageMessages id="Error"></apex:pageMessages> 
+    
+</apex:pageBlock>
+</apex:form>
+</apex:page>

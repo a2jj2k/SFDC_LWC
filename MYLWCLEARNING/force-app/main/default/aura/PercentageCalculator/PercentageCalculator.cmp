@@ -1,0 +1,24 @@
+<aura:component >
+    <aura:attribute name="WholeNumber" type="integer" access="public" />
+    <aura:attribute name="percentage" type="integer" access="public" />
+    <aura:attribute name="test1" type="integer" default="6946" access="public" />
+    <aura:attribute name="test2" type="string" default="Royal Enfield" access="public" />
+    
+    <div class="slds-p-around_x-small">
+        <lightning:input type="number" name="input1" label="Enter a number" 
+                         value="{!v.WholeNumber}" />
+        <lightning:input type="number" name="input1" label="Enter a percentage" 
+                         value="{!v.percentage}" formatter="percent-fixed" />
+        
+        
+        <lightning:input aura:id="numb1" label="Enter a vehicle number" />
+        
+        
+       <!-- {!v.WholeNumber} <br/>
+        {!v.percentage}
+        <br/>-->
+        <br/> 
+        {!v.percentage} percent of {!v.WholeNumber} is {!div(mult(v.WholeNumber, v.percentage), 100)}
+    </div>
+    <lightning:button value="Component Methods" label="Component Methods" onclick="{!c.doClick}" />
+</aura:component>

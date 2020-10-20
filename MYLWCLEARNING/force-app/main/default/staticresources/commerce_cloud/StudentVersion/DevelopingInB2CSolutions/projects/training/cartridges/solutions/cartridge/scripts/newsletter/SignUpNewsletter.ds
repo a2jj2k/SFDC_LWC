@@ -1,0 +1,23 @@
+/**
+*
+*   @input firstName : String
+*   @input lastName : String
+*   @input email : String
+*   @output subscription: Object
+*   @output stefan: Object
+
+*/
+importPackage( dw.object );
+
+function execute( args : PipelineDictionary ) : Number
+{
+	
+    //Use the same email twice to generate a duplicate key exception
+    var co = CustomObjectMgr.createCustomObject("NewsletterSubscription", args.email);
+    co.custom.firstName = args.firstName;
+    co.custom.lastName = args.lastName;
+    
+    args.subscription = co;
+    
+    return PIPELET_NEXT;
+}

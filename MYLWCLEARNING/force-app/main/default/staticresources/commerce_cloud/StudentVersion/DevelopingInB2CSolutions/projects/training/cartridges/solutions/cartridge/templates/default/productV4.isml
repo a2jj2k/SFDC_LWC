@@ -1,0 +1,7 @@
+<iscomment>Using a custom tag</iscomment>
+<isdecorate template="product/pt_productdetails">
+	<h1>The product name is ${pdict.myProduct.name}</h1>
+	<iscomment> Using the producttile custom tag </iscomment>
+    <isinclude template="util/modules.isml" >	
+	<isproducttile product="${pdict.myProduct}" showswatches="${true}" showpricing="${true}" showquickview="${false}">
+</isdecorate>
